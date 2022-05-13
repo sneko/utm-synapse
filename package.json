@@ -96,5 +96,8 @@
     "branches": [
       "main"
     ]
+  },
+  "dependencies": {
+    "memorystorage": "^0.12.0"
   }
 }

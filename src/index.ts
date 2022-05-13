@@ -1,3 +1,5 @@
+import MemoryStorage from 'memorystorage';
+
 export enum UtmParamEnum {
   Source = 'utm_source',
   Medium = 'utm_medium',
@@ -19,7 +21,7 @@ export type UtmParams = Partial<Record<UtmParamEnum, string>>;
 /** Its instance allows you to deal with UTM parameters */
 export class UtmSynapse {
   public static readonly StorageKey: string = 'utmParams';
-  protected readonly storage: Storage | null = sessionStorage;
+  protected readonly storage: Storage | null;
 
   constructor() {
     // In the future we could allow customizing the `sessionStorage` key...
@@ -30,7 +32,9 @@ export class UtmSynapse {
         `Using the UTM package without having a storage won't work properly`
       );
 
-      this.storage = null;
+      this.storage = new MemoryStorage();
+    } else {
+      this.storage = sessionStorage;
     }
   }
 
