@@ -99,10 +99,10 @@ const utmSynapse = new UtmSynapse();
 
 ### Use of `sessionStorage`, why?
 
-The package is only relying on `sessionStorage` to keep track of UTM parameters because it won't be share between sessions. The reason to avoid `localStorage` and `cookies`:
+The package is only relying on `sessionStorage` to keep track of UTM parameters because it won't be shared between sessions. The reason to avoid `localStorage` and `cookies`:
 
 - imagine you are dealing with multiple tabs for the same website, you would not mixed the UTM parameters between different flows
-- and if you come back 2 days later, you accept the conset, you don't want to use the UTM parameters registered a while in a different context
+- and if you come back 2 days later, you accept the consent, you don't want to use the UTM parameters registered a while in a different context
 
 [build-img]: https://github.com/sneko/utm-synapse/actions/workflows/release.yml/badge.svg
 [build-url]: https://github.com/sneko/utm-synapse/actions/workflows/release.yml
