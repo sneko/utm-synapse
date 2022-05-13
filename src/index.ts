@@ -29,7 +29,7 @@ export class UtmSynapse {
     // In case the storage is missing, log this plugin won't work normally
     if (typeof Storage === 'undefined') {
       console.warn(
-        `Using the UTM package without having a storage won't work properly`
+        "Using the UTM package without having a storage won't work properly"
       );
 
       this.storage = new MemoryStorage();
@@ -61,7 +61,7 @@ export class UtmSynapse {
   }
 
   /** Save UTM parameters for later usage */
-  public save(params: UtmParams) {
+  public save(params: UtmParams): void {
     if (!this.storage) {
       return;
     }
@@ -111,7 +111,7 @@ export class UtmSynapse {
 
     const utmParams = this.storage.getItem(UtmSynapse.StorageKey);
 
-    return utmParams ? JSON.parse(utmParams) : null;
+    return utmParams ? (JSON.parse(utmParams) as UtmParams) : null;
   }
 
   /** Clear the storage of any UTM parameter */
@@ -146,7 +146,7 @@ export class UtmSynapse {
    * Tip: you should save parameters before doing this (because they would be lost otherwise)
    * Note: if the history browser feature is not accessible it won't work
    */
-  public cleanDisplayedUrl() {
+  public cleanDisplayedUrl(): void {
     if (!window || !history) {
       return;
     }
