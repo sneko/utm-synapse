@@ -118,3 +118,23 @@ The package is only relying on `sessionStorage` to keep track of UTM parameters 
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
 [commitizen-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 [commitizen-url]: http://commitizen.github.io/cz-cli/
+
+### Development & pull requests
+
+If you are willing to contribute to this library, you can easily watch tests while developing:
+
+```bash
+yarn run test:watch
+```
+
+In you intend while developing on this library to test directly into a parent project (thanks to `yarn link ...`), you can use the following so modifications are reflected with just a page refresh (it can be used in parallel to the previous command):
+
+```
+yarn run dev
+```
+
+_Note: in case your "parent project" uses CommonJS it's required to use `yarn run dev:cjs`_
+
+**[IMPORTANT] To develop, and in case your package manager is `npm` you should be able to install dependencies to do some testing... but to submit a pull request please use `yarn` because our dependency tree is managed through `yarn.lock` (and not `package-lock.json` from `npm`).**
+
+Thanks in advance! 🚀
