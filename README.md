@@ -104,21 +104,6 @@ The package is only relying on `sessionStorage` to keep track of UTM parameters 
 - imagine you are dealing with multiple tabs for the same website, you would not mixed the UTM parameters between different flows
 - and if you come back 2 days later, you accept the consent, you don't want to use the UTM parameters registered a while in a different context
 
-[build-img]: https://github.com/sneko/utm-synapse/actions/workflows/release.yml/badge.svg
-[build-url]: https://github.com/sneko/utm-synapse/actions/workflows/release.yml
-[downloads-img]: https://img.shields.io/npm/dt/utm-synapse
-[downloads-url]: https://www.npmtrends.com/utm-synapse
-[npm-img]: https://img.shields.io/npm/v/utm-synapse
-[npm-url]: https://www.npmjs.com/package/utm-synapse
-[issues-img]: https://img.shields.io/github/issues/sneko/utm-synapse
-[issues-url]: https://github.com/sneko/utm-synapse/issues
-[codecov-img]: https://codecov.io/gh/sneko/utm-synapse/branch/main/graph/badge.svg
-[codecov-url]: https://codecov.io/gh/sneko/utm-synapse
-[semantic-release-img]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
-[semantic-release-url]: https://github.com/semantic-release/semantic-release
-[commitizen-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
-[commitizen-url]: http://commitizen.github.io/cz-cli/
-
 ### Development & pull requests
 
 If you are willing to contribute to this library, you can easily watch tests while developing:
@@ -138,3 +123,18 @@ _Note: in case your "parent project" uses CommonJS it's required to use `yarn ru
 **[IMPORTANT] To develop, and in case your package manager is `npm` you should be able to install dependencies to do some testing... but to submit a pull request please use `yarn` because our dependency tree is managed through `yarn.lock` (and not `package-lock.json` from `npm`).**
 
 Thanks in advance! 🚀
+
+[build-img]: https://github.com/sneko/utm-synapse/actions/workflows/release.yml/badge.svg
+[build-url]: https://github.com/sneko/utm-synapse/actions/workflows/release.yml
+[downloads-img]: https://img.shields.io/npm/dt/utm-synapse
+[downloads-url]: https://www.npmtrends.com/utm-synapse
+[npm-img]: https://img.shields.io/npm/v/utm-synapse
+[npm-url]: https://www.npmjs.com/package/utm-synapse
+[issues-img]: https://img.shields.io/github/issues/sneko/utm-synapse
+[issues-url]: https://github.com/sneko/utm-synapse/issues
+[codecov-img]: https://codecov.io/gh/sneko/utm-synapse/branch/main/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/sneko/utm-synapse
+[semantic-release-img]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-release-url]: https://github.com/semantic-release/semantic-release
+[commitizen-img]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
+[commitizen-url]: http://commitizen.github.io/cz-cli/
