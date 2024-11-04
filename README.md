@@ -52,8 +52,11 @@ yarn add utm-synapse
 import { utmSynapse } from 'utm-synapse';
 
 const utmParams = utmSynapse.parse(); // Will parse according to the current URL
-utmSynapse.save(utmParams);
-utmSynapse.hideFromDisplayedUrl();
+
+if (utmParams) {
+  utmSynapse.save(utmParams);
+  utmSynapse.cleanDisplayedUrl();
+}
 
 // ... Your frontend router does its own things
 // ...
